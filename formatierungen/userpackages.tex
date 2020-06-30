@@ -1,0 +1,77 @@
+% \usepackage{xcolor}
+% \usepackage{glossaries}
+% \usepackage{lingmacros}
+% \usepackage{tree-dvips}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+% \usepackage{xr}
+\usepackage{graphicx}
+\usepackage{wrapfig,lipsum}
+\usepackage[tocflat]{tocstyle}
+% \usepackage[bottom]{footmisc}
+\usepackage[ngerman, num]{isodate}
+% \usepackage{fourier}
+% \usepackage[parfill]{parskip}
+\usepackage{hyperref}
+% % * Set page layout
+% % Seitenränder
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{csvsimple}
+% % * Set font 'Fira Sans Regular'
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[T1]{fontenc}
+% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+\usepackage{enumerate}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%subsubsubsections
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+
+
+
+% Kopfzeile
+\linespread{1.25}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\renewcommand{\refname}{}
+
+% Bilder Referenzen
+\usepackage{graphicx}
+\graphicspath{ {./bilder/} }
+
+\renewcommand{\listfigurename}{}
+\makeatother
+\renewcommand{\figurename}{Abbildung}
+%\renewcommand{\thefigure}{\thefigure \arabic{figure}}
+\renewcommand{\cftfigfont}{Abb. }
+
+
+
+
+\renewcommand{\contentsname}{Inhalt}
+
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\usepackage{makecell}
+\usepackage{longtable}
+
+\newcommand*{\source}[3]{%
+  \caption[#1 \newline #2 \newline #3]{#1}
+}
+
+\usepackage{xltabular}

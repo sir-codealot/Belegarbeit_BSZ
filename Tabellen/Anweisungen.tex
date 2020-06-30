@@ -1,0 +1,37 @@
+\renewcommand{\tabcolsep}{1pt}
+\begin{xltabular}{\textwidth}{@{}p{0.4\textwidth}@{\hspace{3em}}p{0.6\textwidth}@{}}
+    \\\hline
+    \makecell[l]{netsh interface ipv6 show interfaces \\ (füher ipv6 if)}
+        &
+    \makecell[l]{
+        Pingt das angegebene Interface an und gibt dabei die link-layer-adress, die ipv6 Adressen die zu dem Interface gehören und das aktuelle MTU und die maximale Anzahl der MTU’s die das Interface unterstützen kann.\\
+        Interface 1 ist ein Pseudo-Interface.\\
+        zeigt an:\\
+            \textbf{Index} - Bereichskennung \\
+            \textbf{Met} - gibt die Pfadkosten an, je niedriger, desto besser, kann wenn es mehrere Routen gibt dazu verwendet werden zu entscheiden, welche Route verwendet wird\\
+            \textbf{MTU} - maximale Anzahl an MTU’s die das Interface unterstützt\\
+            \textbf{state} - status des Interfaces, ist Interface enabled Oder disabled\\
+            \textbf{name} - Name des Interfaces
+    }
+    \\\hline
+    ping -6 ::1
+    &
+    Pingt den localhost an. Das heißt es wird ein ICMP-Paket mit einem TTL Wert von 128 gesendet und kommt vom localhost wieder zurück.
+    \\\hline
+    ping -6 Adresse\%Bereichskennung
+    &
+    Pingt die Adresse über das in der Bereichskennung angegebene Interface an. Zum Beispiel wenn man die Adresse fe80::1\%SCHNITTSTELLE einen ping heraus sendet, wird ein ICMP Paket an die Link-Local-Adress fe80::1 über die Schnittstelle “SCHNITTSTELLE” an.
+    \\\hline
+    netsh interface ipv6 show route
+    &
+    \makecell[l]{
+        Pingt jeden Hop bis zum Host an und verfolgt dabei die Route.\\
+        Dabei werden ICMP-Pakete mit immer höher werdendem TTL-Wert ausgesandt, die dann nacheinander von den beteiligten Routern bearbeitet werden. Der höchste TTL-Wert entspricht dann dem des Hosts.\\
+        Die Ausgabe zeigt dann die Hops bis zum Ziel an.\\
+        Angezeigt werden:\\
+            - Der wie vielte Hop wurde bewältigt\\
+            - die Zeit die gebraucht wurde um den Hop zu bewältigen\\
+            - die IP des Hops und die Benennung
+    }
+
+\end{xltabular}

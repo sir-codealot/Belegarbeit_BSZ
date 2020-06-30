@@ -1,0 +1,63 @@
+\renewcommand{\tabcolsep}{1pt}
+\begin{longtable}{@{}p{0.3\textwidth}@{\hspace{3em}}p{0.6\textwidth}}
+    \\\hline
+    \makecell[l]{Bitübertragungsschicht \\ (Physical Layer)}
+        & 
+        \begin{itemize}
+            \item elektrische / physische Übertragung der Daten 
+        \end{itemize}
+        
+    \\\hline
+
+    \makecell[l]{Sicherungsschicht \\ (Data Link Layer)}
+        &
+        \begin{itemize}
+            \item alle Vorkehrungen, die dafür sorgen, dass aus der physikalischen Übertragung ein verlässlicher Datenfluss wird
+        
+        \end{itemize}
+    \\\hline
+    
+    \makecell[l]{Vermittlungsschicht \\ (Network Layer)}
+        &
+        \begin{itemize}
+            \item Komponenten und Protokolle, die an der Verbindung zwischen Rechnern beteiligt sind - das sogenannte Routing - Weiterleiten von Daten in andere logische und oder physikalisch inkompatible Netzwerke
+        \end{itemize}
+    \\\hline
+    
+    \makecell[l]{Transportschicht \\ (Transport Layer)}
+        &
+        \begin{itemize}
+            \item verbindungsorientierte Protokolle wie TCP und verbindungslose Protokolle wie UDP
+            \item ein wichtiger Aspekt dieser Schicht ist Multiplexing - Anbindung der Datenpakete an konkrete Prozesse auf den kommunizierenden Rechnern 
+            \item Segmentierung des Datenstroms und Datenstauvermeidung
+        \end{itemize}
+    \\\hline
+
+    \makecell[l]{Kommunikationssteuerungsschicht \\ (Session Layer)}
+        &
+        \begin{itemize}
+            \item sichert Kommunikation zwischen kooperierenden Anwendungen oder Prozessen auf verschiedenen Rechnern
+            \item organisiert und synchronisiert Datenaustausch
+        \end{itemize}
+    \\\hline
+
+    \makecell[l]{Darstellungsschicht \\ (Presentation Layer)}
+        &
+        \begin{itemize}
+            \item Konvertierung und Übertragung von Datenformaten, Datensätzen, Zeichensätzen, grafische Anweisungen und Dateidienste
+            \item systemabhängige Darstellung von Daten
+            \item Datenkompression, Verschlüsselung
+            \item stellt sicher, dass Daten die von der Anwendungsschicht des einen Systems gesendet werden von der Anwendungsschicht eines anderen Systems gelesen werden können
+        \end{itemize}
+    \\\hline
+
+    \makecell[l]{Anwendungsschicht \\ (Application Layer)}
+        &
+        \begin{itemize}
+            \item unmittelbare Kommunikation zwischen Benutzeroberflächen der Anwendungsprogramme
+            \item Das Anwendungsprogramm selbst zählt nicht dazu
+        \end{itemize}
+    \\\hline
+
+    
+\end{longtable}
