@@ -14,14 +14,100 @@
 
     \subsubsubsection{Verhältnis Payload zur Paketgröße nach DoD-Modell}
 
-    \subsubsubsection{Anteil der Nutzdaten zum Frame für den}
+        \textbf{Request}
+        \include{Tabellen/request_payload}
+        \vspace{1cm}
+        \textbf{Response}
+        \include{Tabellen/response_payload}
+
+    \subsubsubsection{Anteil der Nutzdaten zum Frame für den Request und den Response}
+        \textbf{Request}\\
+        Frame: 573 Bytes \\
+        HTML: 0 Bytes\\
+        Anteil: 0 \%\\
+        \textbf{Response}\\
+        Frame: 498 Bytes\\
+        HTML: 133 Bytes\\
+        Anteil: 26,7 \%
 
 \subsubsection{Umstellung von IPv4 auf IPv6}
+    \begin{figure}
+        \includegraphics{2_2_3/umstellung_ipv4_ipv6.png}
+        \source{Umstellung von IPv4 auf IPv6}{Screenshot}{}
+    \end{figure}
 
     \subsubsubsection{Ausführung des Befehls ipv6 if}
 
+    \begin{figure}
+        \includegraphics{2_2_3/2.png}
+        \source{Ausführung des Befehls ipv6 if}{Screenshot}{}
+    \end{figure}
+
     \subsubsubsection{Testen der Verbindung mit ping, Ermittlung des korrektem Befehls}
 
+    \begin{figure}
+        \includegraphics{2_2_3/3.png}
+        \source{Ausführen eines Pings auf eine IPv6}{}{}
+    \end{figure}
+
     \subsubsubsection{Testen der Aufzeichnung der Kommunikationsbeziehung mit Wireshark und die Unterschiede zu 2.2.1.1}
+        \begin{figure}
+            \includegraphics{2_2_3/4.png}
+            \source{Mitschnitt via Wireshark}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/5.png}
+            \source{Mitschnitt via Wireshark}{}{}
+        \end{figure}
+
+        \textbf{Unterschiede zu 2.2.1.1}
+        \begin{itemize}
+            \item Bei IPv6 ist IP-Header ist größer, da dieser die längeren IPv6 Adressen enthält
+            \item Checksum im Payload hat sich verändert
+            \item Bei IPv4 gibt es zwei Identifier (BE \& LE), bei IPv6 nur einen
+            \item Bei IPv4 gibt es zwei Sequence numbers (BE \& LE), bei IPv6 nur eine sequence (number)
+            \item Bei IPv4 gibt es eine “Time to live”, bei IPv6 heißt diese nun “Hop limit”
+        \end{itemize}
 
     \subsubsubsection{Testen einer Ordnerfreigabe zur WS2}
+        
+        \begin{figure}
+            \includegraphics{2_2_3/6.png}
+            \source{Eigenschaften der Freigabe}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/7.png}
+            \source{Erweiterte Freigabe}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/8.png}
+            \source{Berechtigungen für die Freigabe}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/9.png}
+            \source{Bearbeiten der Sicherheit der Freigabe}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/10.png}
+            \source{Berechtigungen hinzufügen}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/11.png}
+            \source{Einstellen der Bruntzergruppen}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/12.png}
+            \source{Berechtigungen für Freigabe}{Screenshot}{}
+        \end{figure}
+
+        \begin{figure}
+            \includegraphics{2_2_3/13.png}
+            \source{Anzeige des Freigegebenen Dokuments auf WS1}{Screenshot}{}
+        \end{figure}

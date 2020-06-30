@@ -1,0 +1,19 @@
+\begin{longtable}{l|c|c|l}
+    \\\hline
+    Schicht
+    Größe in Byte & Protokoll & Verhältnis Payload zu Paketgröße
+    \\\hline
+    Application & 444 & Data (HTTP + Payload) & 89,14 \%
+    \\\hline
+    Host-to-Host & 20 & Header (TCP) & -
+    \\\hline
+    Host-To-Host Gesamt & 464 & Data (HTTP + Payload + TCP) & 93,17 \%
+    \\\hline
+    Internet & 20 & Header (IPv4) & -
+    \\\hline
+    Internet Gesamt & 484 & Data (HTTP + Payload + TCP + IPv4) & 97,19 \%
+    \\\hline
+    Network-Access & 14 & Header (Ethernet) & -
+    \\\hline
+    Paket Gesamt & 498 & Data (gesamt) & 100 \%
+\end{longtable}

@@ -4,13 +4,13 @@
     \makecell[l]{netsh interface ipv6 show interfaces \\ (füher ipv6 if)}
         &
     \makecell[l]{
-        Pingt das angegebene Interface an und gibt dabei die link-layer-adress, die ipv6 Adressen die zu dem Interface gehören und das aktuelle MTU und die maximale Anzahl der MTU’s die das Interface unterstützen kann.\\
+        Pingt das angegebene Interface an und gibt dabei die \\link-layer-adress, die ipv6 Adressen die zu dem Interface \\gehören und das aktuelle MTU und die maximale An-\\zahl der MTU’s die das Interface unterstützen kann.\\
         Interface 1 ist ein Pseudo-Interface.\\
         zeigt an:\\
             \textbf{Index} - Bereichskennung \\
-            \textbf{Met} - gibt die Pfadkosten an, je niedriger, desto besser, kann wenn es mehrere Routen gibt dazu verwendet werden zu entscheiden, welche Route verwendet wird\\
-            \textbf{MTU} - maximale Anzahl an MTU’s die das Interface unterstützt\\
-            \textbf{state} - status des Interfaces, ist Interface enabled Oder disabled\\
+            \textbf{Met} - gibt die Pfadkosten an, je niedriger, desto besser, \\kann wenn es mehrere Routen gibt dazu verwendet wer-\\den zu entscheiden, welche Route verwendet wird\\
+            \textbf{MTU} - maximale Anzahl an MTU’s die das Interface \\unterstützt\\
+            \textbf{state} - status des Interfaces, ist Interface enabled oder\\ disabled\\
             \textbf{name} - Name des Interfaces
     }
     \\\hline
@@ -25,13 +25,16 @@
     netsh interface ipv6 show route
     &
     \makecell[l]{
-        Pingt jeden Hop bis zum Host an und verfolgt dabei die Route.\\
-        Dabei werden ICMP-Pakete mit immer höher werdendem TTL-Wert ausgesandt, die dann nacheinander von den beteiligten Routern bearbeitet werden. Der höchste TTL-Wert entspricht dann dem des Hosts.\\
+        Pingt jeden Hop bis zum Host an und verfolgt dabei die \\Route.\\
+        Dabei werden ICMP-Pakete mit immer höher werden \\dem TTL-Wert ausgesandt, die dann nacheinander von\\ den beteiligten Routern bearbeitet werden. Der höchste \\TTL-Wert entspricht dann dem des Hosts.\\
         Die Ausgabe zeigt dann die Hops bis zum Ziel an.\\
         Angezeigt werden:\\
             - Der wie vielte Hop wurde bewältigt\\
             - die Zeit die gebraucht wurde um den Hop zu bewältigen\\
             - die IP des Hops und die Benennung
     }
-
+    \\\hline
+    Ipv6 [-p] rc [IfIndex [Adress]]
+    &
+    Zeigt den ping zum “route cache” bzw den Ziel caches, von welchen es mehrere geben kann, je nachdem, wie viele Interfaces auf dem Weg passiert werden. Es werden von jedem Route Cache Eintrag das nächste Interface und die Nachbar Adresse angezeigt. Desweiteren wird der Pfad MTU zur erreichung de Ziels durch das Interface und ob es ein Interface spezifischiches route cache Eintrag ist angezeigt.
 \end{xltabular}
