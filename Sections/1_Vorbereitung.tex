@@ -20,9 +20,9 @@
 
     \input{Tabellen/OSI_Modell}
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{vorbereitung/Osi.png}
+        \includegraphics[width=0.7\textwidth]{vorbereitung/Osi.png}
         \source{Osi Modell}{https://www.der-wirtschaftsingenieur.de/bilder/it/OSI-Modell3.PNG}{3.1.2020 14:30}
     \end{figure}
     \vspace{0cm}
@@ -30,9 +30,9 @@
     \\
     Ein Repeater verstärkt ganz simpel die elektronischen Signale und nutzt deswegen nur die 1. Schicht des OSI-Models. Der in der Abbildung unterhalb veranschaulichte HUB (Multi-Port-Repeater) sendet ein von PC0 gesendetes Paket an alle anderen PC’s weiter, da er keine Möglichkeit hat, an ein bestimmtes Gerät zu senden, da er keine MAC-Adressen speichert. Er teilt keine Broadcastdomäne.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{vorbereitung/ping_hub.png}
+        \includegraphics[width=0.7\textwidth]{vorbereitung/ping_hub.png}
         \source{Ping über einen Hub}{https://www.tinohempel.de/info/info/netze/osi.htm}{8.1.2020 13:00}
     \end{figure}
     \vspace{0cm}
@@ -40,9 +40,9 @@
     \\
     Eine Bridge verbindet mehrere über Kabel verbundene Netzwerke / PCs miteinander, sodass sie ein einzelnes Netz repräsentieren. In Bezug auf das OSI Modell werden über die erste Schicht Signale versandt und über die zweite Schicht werden die Signale einem Zielort via einer Link-Layer-Address zugeordnet. In der folgenden Abbildung sieht man einen Switch (Multi-Port-Bridge), welcher die von PC0 gesendeten Pakete anhand der MAC-Adresse, aus dem entsprechenden Port, an PC2 weiterleitet. \\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{vorbereitung/ping_bridge.png}
+        \includegraphics[width=0.7\textwidth]{vorbereitung/ping_bridge.png}
         \source{Ping über einen Switch}{https://www.tinohempel.de/info/info/netze/osi.htm}{8.1.2020 13:00}
     \end{figure}
     \vspace{0cm}
@@ -50,9 +50,9 @@
     \\
     Ein Router verbindet mehrere Netzwerke miteinander. Anhand von Routing-Tabellen (statisch oder dynamisch) leitet er die Datenpakete in die entsprechende Netze oder über ein Default-Gateway weiter. Die Routing-Entscheidungen geschehen aufgrund von IP-Adressen (OSI-Layer 3) und ggf. weiteren Parametern z.B. anhand der Pfadkosten beim OSPF-Protokoll. PC0 sendet das Datenpaket an Router1 mit seiner IP-Adresse als Quelladresse und der Zieladresse (PC2). Der Router kennt das Zielnetz, da es direkt angeschlossen ist und sendet es an PC2 weiter.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{vorbereitung/ping_router.png}
+        \includegraphics[width=0.7\textwidth]{vorbereitung/ping_router.png}
         \source{Ping über einen Router}{https://www.tinohempel.de/info/info/netze/osi.htm}{8.1.2020 13:00}
     \end{figure}
     \vspace{0cm}
@@ -85,7 +85,7 @@
 
     Der Befehl ping ist unter den meisten Betriebssystemen wie Windows, Linux (und anderen Unixartigen), Unix oder macOS, aber auch als Analysetool auf Geräten wie Routern nutzbar. Die Ausführung des Befehls und somit die Aussendung der ICMP Pakete unterscheiden sich jedoch je nach Betriebssystem, so sendet Windows eine begrenzte Anzahl an Paketen während Linux eine unbegrenzte Anzahl sendet und nur manuell abgebrochen werden kann.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/IPv4_IPv6_Datagramm.png}
         \source{IMCP Aufbau}{https://en.wikipedia.org/wiki/Ping\_\(networking\_utility\)\#ICMP\_packet}{2.1.2020 15:00}
@@ -100,14 +100,14 @@
     DÜE bezeichnet die Datenübertragungseinrichtung. Sie ist die Verbindung zwischen den DDE’s und dem Netzwerk und wandelt die Daten in eine geeignete Form für die Übertragung um.\\
     Zwischen DDE und DÜE befindet sich eine serielle Schnittstelle (V.24, RS232), ein USB Kabel oder eine Funkverbindung wie Bluetooth.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/DFUE.png}
         \source{DFÜ Modell}{eigene Zusammenstellung}{}
     \end{figure}
 \subsection{Skizze des Protokollstapels}
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/Protokollstapel.png}
         \source{Skizze eines Protokollstapels eines HTTP Requests}{eigene Zusammenstellung}{}
@@ -119,7 +119,7 @@
     \\
     Übergeben zusätzliche Informationen über die Antwort, die nicht in die Status Line passen. Sie Enthalten Informationen über den Server und weitere Zugänge zu der Quelle. Diese sind durch die Request-URI gekennzeichnet.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/http_response_header.png}
         \source{HTTP Response Header}{http://www.coder-welten.de/glossar/request-und-response-18.html}{07.01.2020 15:00}
@@ -128,7 +128,7 @@
     \textbf{HTTP Request Header}
     \\
     Geben zusätzliche Informationen über den Request mit, wie über den Client selbst, zum Server. \\
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/http_request_header.png}
         \source{HTTP Request Header}{http://www.coder-welten.de/glossar/request-und-response-18.html}{07.01.2020 15:00}
@@ -138,7 +138,7 @@
     \\
     Dieser Header enthält die zur Kommunikation erforderlichen Daten und Dateiformat-beschreibende Informationen. Normalerweise sind TCP Header 20 Bytes lang, können aber mit den kaum genutzen Optionen erweitert werden.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/TCP_Header.png}
         \source{TCP Header}{https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/TCP\_Header.svg/1024px-TCP\_Header.svg.png}{2.1.2020 14:00}
@@ -148,7 +148,7 @@
     \\
     Die Länge von IPv4 Header ist normalerweise 20 Bytes, kann aber mit bestimmten Optionen auf bis 60 Bytes erweitert werden.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/IPv4_Header.png}
         \source{IPv4 Header}{https://de.wikipedia.org/wiki/IPv4\#Header-Format}{2.1.2020 14:30}
@@ -158,7 +158,7 @@
     \\
     Hat eine feste Länge von 40 Bytes. Optionale selten genutzte Daten können in Extension Headern zwischen Header und Payload gesendet werden.\\
 
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{vorbereitung/IPv6_Header.png}
         \source{IPv6 Header}{https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/IPv6\_Header.svg/1280px-IPv6\_Header.svg.png}{2.1.2020 14:45}

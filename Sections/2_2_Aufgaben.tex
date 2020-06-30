@@ -1,16 +1,83 @@
 \subsubsection{Aufzeichnung und Analyse der ICMP requests und replys}
 
     \subsubsubsection{Fabliches Markieren von Bestandteilen der Paketinhalten}
+        \textbf{Request}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_2/a_request.png}
+            \source{Wireshark Mitschnitt von ping request}{eigene Zusammenstellung}{}
+        \end{figure}
+        \textbf{Reply}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_2/a_reply.png}
+            \source{Wireshark Mitschnitt von ping reply}{eigene Zusammenstellung}{}
+        \end{figure}
 
     \subsubsubsection{Ermittlung der WS1-IP und des dazugehörigen Hexadezimalcode im IP-Header}
+        \textbf{IP Header}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_2/b_IP-Header.png}
+            \source{IP Header}{eigene Zusammenstellung}{}
+        \end{figure}
 
     \subsubsubsection{Bestimmung der MAC und des NIC}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_2/c_MAC_NIC.png}
+            \source{Wireshark Mitschnitt von ping request}{eigene Zusammenstellung}{}
+        \end{figure}
 
 \subsection{Aufzeichnung der Protokollübertragung von hallo.htm zur WS2}
-
-    \subsubsubsection{Header und Payload jeder Protokollschicht}
-
-    \subsubsubsection{Zuordnung zu OSI Schichten}
+    \subsubsubsection{Header und Payload jeder Protokollschicht und Zuordnung zu OSI Schichten}
+        \textbf{HTTP-Request}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/1.png}
+            \source{Ethernet II (Schicht 2)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/2.png}
+            \source{IPv4 (Schicht 3)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/3.png}
+            \source{TCP (Schicht 4)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/4.png}
+            \source{HTTP}{eigene Zusammenstellung}{}
+        \end{figure}
+        \textbf{HTTP-REsponse}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/5.png}
+            \source{Ethernet II (Schicht 2)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/6.png}
+            \source{IPv4 (Schicht 3)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/7.png}
+            \source{TCP (Schicht 4)}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/8.png}
+            \source{HTTP}{eigene Zusammenstellung}{}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{2_3/9.png}
+            \source{Payload}{eigene Zusammenstellung}{}
+        \end{figure}
 
     \subsubsubsection{Verhältnis Payload zur Paketgröße nach DoD-Modell}
 
@@ -31,34 +98,39 @@
         Anteil: 26,7 \%
 
 \subsubsection{Umstellung von IPv4 auf IPv6}
-    \begin{figure}
-        \includegraphics{2_2_3/umstellung_ipv4_ipv6.png}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/umstellung_ipv4_ipv6.png}
         \source{Umstellung von IPv4 auf IPv6}{Screenshot}{}
     \end{figure}
 
     \subsubsubsection{Ausführung des Befehls ipv6 if}
 
-    \begin{figure}
-        \includegraphics{2_2_3/2.png}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/2.png}
         \source{Ausführung des Befehls ipv6 if}{Screenshot}{}
     \end{figure}
 
     \subsubsubsection{Testen der Verbindung mit ping, Ermittlung des korrektem Befehls}
 
-    \begin{figure}
-        \includegraphics{2_2_3/3.png}
-        \source{Ausführen eines Pings auf eine IPv6}{}{}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/3.png}
+        \source{Ausführen eines Pings auf eine IPv6}{Screenshot}{}
     \end{figure}
 
     \subsubsubsection{Testen der Aufzeichnung der Kommunikationsbeziehung mit Wireshark und die Unterschiede zu 2.2.1.1}
-        \begin{figure}
-            \includegraphics{2_2_3/4.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/4.png}
             \source{Mitschnitt via Wireshark}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/5.png}
-            \source{Mitschnitt via Wireshark}{}{}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/5.png}
+            \source{Mitschnitt via Wireshark}{Screenshot}{}
         \end{figure}
 
         \textbf{Unterschiede zu 2.2.1.1}
@@ -72,42 +144,50 @@
 
     \subsubsubsection{Testen einer Ordnerfreigabe zur WS2}
         
-        \begin{figure}
-            \includegraphics{2_2_3/6.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/6.png}
             \source{Eigenschaften der Freigabe}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/7.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/7.png}
             \source{Erweiterte Freigabe}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/8.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/8.png}
             \source{Berechtigungen für die Freigabe}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/9.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/9.png}
             \source{Bearbeiten der Sicherheit der Freigabe}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/10.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/10.png}
             \source{Berechtigungen hinzufügen}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/11.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/11.png}
             \source{Einstellen der Bruntzergruppen}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/12.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/12.png}
             \source{Berechtigungen für Freigabe}{Screenshot}{}
         \end{figure}
 
-        \begin{figure}
-            \includegraphics{2_2_3/13.png}
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{2_2_3/13.png}
             \source{Anzeige des Freigegebenen Dokuments auf WS1}{Screenshot}{}
         \end{figure}

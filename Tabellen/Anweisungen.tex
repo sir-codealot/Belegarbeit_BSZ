@@ -1,6 +1,6 @@
 \renewcommand{\tabcolsep}{1pt}
-\begin{xltabular}{\textwidth}{@{}p{0.4\textwidth}@{\hspace{3em}}p{0.6\textwidth}@{}}
-    \\\hline
+\begin{longtable}{@{}p{0.4\textwidth}@{\hspace{3em}}p{0.6\textwidth}@{}}
+    \hline
     \makecell[l]{netsh interface ipv6 show interfaces \\ (füher ipv6 if)}
         &
     \makecell[l]{
@@ -36,5 +36,6 @@
     \\\hline
     Ipv6 [-p] rc [IfIndex [Adress]]
     &
-    Zeigt den ping zum “route cache” bzw den Ziel caches, von welchen es mehrere geben kann, je nachdem, wie viele Interfaces auf dem Weg passiert werden. Es werden von jedem Route Cache Eintrag das nächste Interface und die Nachbar Adresse angezeigt. Desweiteren wird der Pfad MTU zur erreichung de Ziels durch das Interface und ob es ein Interface spezifischiches route cache Eintrag ist angezeigt.
-\end{xltabular}
+    Zeigt den ping zum “route cache” bzw den Ziel caches, von welchen es mehrere geben kann, je nachdem, wie viele Interfaces auf dem Weg passiert werden. Es werden von jedem Route Cache Eintrag das nächste Interface und die Nachbar Adresse angezeigt. Desweiteren wird der Pfad MTU zur erreichung de Ziels durch das Interface und ob es ein Interface spezifischiches route cache Eintrag ist angezeigt.\\
+    \caption{Terminal Befehle}
+\end{longtable}

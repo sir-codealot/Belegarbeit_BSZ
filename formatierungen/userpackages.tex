@@ -17,10 +17,8 @@
 % % Seitenränder
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{csvsimple}
-% % * Set font 'Fira Sans Regular'
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[T1]{fontenc}
-% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{enumerate}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -75,3 +73,8 @@
 }
 
 \usepackage{xltabular}
+
+\usepackage{float}
+
+\renewcommand{\listtablename}{}
+\renewcommand{\tablename}{Tabelle}
