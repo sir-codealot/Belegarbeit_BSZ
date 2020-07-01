@@ -1,4 +1,13 @@
 \subsubsection{Aufzeichnung und Analyse der ICMP requests und replys}
+    \textbf{Planung}
+    \begin{itemize}
+        \item Mitschneiden der Pakete und darstellen dieser in Hexadezimalcode
+    \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{2_4_1/03-copy.PNG}
+        \source{Ausgebenlassen des Dezimalcodes der Pakete}{Screenshot}{}
+    \end{figure}
 
     \subsubsubsection{Fabliches Markieren von Bestandteilen der Paketinhalten}
         \textbf{Request}
@@ -7,6 +16,7 @@
             \includegraphics[width=\textwidth]{2_2/a_request.png}
             \source{Wireshark Mitschnitt von ping request}{eigene Zusammenstellung}{}
         \end{figure}
+        \pagebreak
         \textbf{Reply}
         \begin{figure}[H]
             \centering
@@ -28,7 +38,7 @@
             \includegraphics[width=\textwidth]{2_2/c_MAC_NIC.png}
             \source{Wireshark Mitschnitt von ping request}{eigene Zusammenstellung}{}
         \end{figure}
-
+\pagebreak
 \subsection{Aufzeichnung der Protokollübertragung von hallo.htm zur WS2}
     \subsubsubsection{Header und Payload jeder Protokollschicht und Zuordnung zu OSI Schichten}
         \textbf{HTTP-Request}
@@ -52,7 +62,8 @@
             \includegraphics[width=\textwidth]{2_3/4.png}
             \source{HTTP}{eigene Zusammenstellung}{}
         \end{figure}
-        \textbf{HTTP-REsponse}
+        \pagebreak
+        \textbf{HTTP-Response}
         \begin{figure}[H]
             \centering
             \includegraphics[width=\textwidth]{2_3/5.png}
@@ -80,12 +91,11 @@
         \end{figure}
 
     \subsubsubsection{Verhältnis Payload zur Paketgröße nach DoD-Modell}
-
         \textbf{Request}
-        \include{Tabellen/request_payload}
-        \vspace{1cm}
+        \input{Tabellen/request_payload}
+
         \textbf{Response}
-        \include{Tabellen/response_payload}
+        \input{Tabellen/response_payload}
 
     \subsubsubsection{Anteil der Nutzdaten zum Frame für den Request und den Response}
         \textbf{Request}\\
@@ -124,13 +134,13 @@
         \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{2_2_3/4.png}
-            \source{Mitschnitt via Wireshark}{Screenshot}{}
+            \source{Mitschnitt via Wireshark request}{Screenshot}{}
         \end{figure}
 
         \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{2_2_3/5.png}
-            \source{Mitschnitt via Wireshark}{Screenshot}{}
+            \source{Mitschnitt via Wireshark reply}{Screenshot}{}
         \end{figure}
 
         \textbf{Unterschiede zu 2.2.1.1}
