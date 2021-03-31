@@ -1,5 +1,5 @@
 % \usepackage{xcolor}
-\usepackage{glossaries}
+%\usepackage{glossaries}
 % \usepackage{lingmacros}
 % \usepackage{tree-dvips}
 \usepackage[utf8]{inputenc}
@@ -10,7 +10,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig,lipsum}
 \usepackage[tocflat]{tocstyle}
-% \usepackage[bottom]{footmisc}
+\usepackage[perpage]{footmisc}
 \usepackage[ngerman, num]{isodate}
 % \usepackage{fourier}
 % \usepackage[parfill]{parskip}
@@ -58,7 +58,14 @@
 \renewcommand{\cftfigfont}{Abb. }
 
 
+% Inhaltsverzeichnis Titel ohne babel
 \renewcommand{\contentsname}{Inhalt}
+
+% ... und mit babel und ngerman als Sprache
+\addto\captionsngerman{% Replace "ngerman" with the language you use
+  \renewcommand{\contentsname}%
+    {Inhalt}%
+}
 
 
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
@@ -81,27 +88,3 @@
 \setlength{\parindent}{0pt}
 
 \setlength{\skip\footins}{1cm}
-
-\renewcommand{\glossarysection}[2][]{}
-%beim Glosar den komischen Einzug verhindern
-\newglossarystyle{mylong}{%
-  \renewenvironment{theglossary}%
-    {\begin{longtable}[l]{llp{\glsdescwidth}p{\glspagelistwidth}}}%
-    {\end{longtable}}%
-  \renewcommand*{\glossaryheader}{}%
-  \renewcommand*{\glsgroupheading}[1]{}%
-  \renewcommand{\glossentry}[2]{%
-    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
-    \glossentrysymbol{##1} &
-    \glossentrydesc{##1} &
-    \tabularnewline
-  }%
-  \renewcommand{\subglossentry}[3]{%
-    &
-    \glssubentryitem{##2}%
-    \glossentrysymbol{##2} &
-    \glstarget{##2}{\strut}\glossentrydesc{##2} & ##3\tabularnewline
-  }%
-  \renewcommand*{\glsgroupskip}{%
-    \ifglsnogroupskip\else & & &\tabularnewline\fi}%
-}
