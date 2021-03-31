@@ -1,5 +1,5 @@
 % \usepackage{xcolor}
-% \usepackage{glossaries}
+\usepackage{glossaries}
 % \usepackage{lingmacros}
 % \usepackage{tree-dvips}
 \usepackage[utf8]{inputenc}
@@ -45,7 +45,6 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 
-
 \renewcommand{\refname}{}
 
 % Bilder Referenzen
@@ -57,8 +56,6 @@
 \renewcommand{\figurename}{Abbildung}
 %\renewcommand{\thefigure}{\thefigure \arabic{figure}}
 \renewcommand{\cftfigfont}{Abb. }
-
-
 
 
 \renewcommand{\contentsname}{Inhalt}
@@ -84,3 +81,27 @@
 \setlength{\parindent}{0pt}
 
 \setlength{\skip\footins}{1cm}
+
+\renewcommand{\glossarysection}[2][]{}
+%beim Glosar den komischen Einzug verhindern
+\newglossarystyle{mylong}{%
+  \renewenvironment{theglossary}%
+    {\begin{longtable}[l]{llp{\glsdescwidth}p{\glspagelistwidth}}}%
+    {\end{longtable}}%
+  \renewcommand*{\glossaryheader}{}%
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand{\glossentry}[2]{%
+    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
+    \glossentrysymbol{##1} &
+    \glossentrydesc{##1} &
+    \tabularnewline
+  }%
+  \renewcommand{\subglossentry}[3]{%
+    &
+    \glssubentryitem{##2}%
+    \glossentrysymbol{##2} &
+    \glstarget{##2}{\strut}\glossentrydesc{##2} & ##3\tabularnewline
+  }%
+  \renewcommand*{\glsgroupskip}{%
+    \ifglsnogroupskip\else & & &\tabularnewline\fi}%
+}
