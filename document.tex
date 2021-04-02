@@ -2,39 +2,30 @@
 \input{formatierungen/userpackages}
 
 \begin{document}
-\input{formatierungen/cover}
-\pagebreak
-\tableofcontents
-\pagebreak
-\section{Einleitung}
-\input{Sections/1_Einleitung}
-\pagebreak
-\section{Datenschutz}
-\input{Sections/2_datenschutz}
-\pagebreak
-\section{Software}
-\input{Sections/3_software}
-\pagebreak
-%\section{Freie Software}
-%\input{Sections/4_freie_software}
-%\pagebreak
-\section{Fazit}
-\input{Sections/5_conclusion}\\
-\pagebreak
-%\section{Abbildungsverzeichnis}
-%\input{Sections/5_imagesources}
-%\pagebreak
-%\section{Tabellenverzeichnis}
-%\listoftables
-%\pagebreak
-\section{Quellen- und Literaturverzeichnis}
-\input{Sections/6_sources}
-\pagebreak
-\section{Glossar}
-\input{Sections/7_glossar}
-\pagebreak
-%\section{Glossar}
-%    \glsaddall
-%    \printglossary[style=mylong,nonumberlist]
-
+    \input{formatierungen/cover}
+    \newpage
+    \tableofcontents
+    \thispagestyle{empty}
+    \newpage
+    \pagenumbering{arabic}
+    \section{Einleitung}
+    \input{Sections/1_Einleitung}
+    \pagebreak
+    \section{Datenschutz}
+    \input{Sections/2_datenschutz}
+    \pagebreak
+    \section{Software}
+    \input{Sections/3_software}
+    \pagebreak
+    \section{Fazit}
+    \input{Sections/5_conclusion}\\
+    \clearpage
+    \pagestyle{plain}
+    \section{Quellen- und Literaturverzeichnis}
+    \input{Sections/6_sources}
+    \pagebreak
+    \section{Glossar}
+    \input{Sections/7_glossar}
+    \pagebreak
+    \input{Sections/8_selbstsaendigkeitserklaerung}
 \end{document}
