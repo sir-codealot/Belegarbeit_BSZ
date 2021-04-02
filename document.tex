@@ -2,10 +2,11 @@
 \input{formatierungen/userpackages}
 
 \begin{document}
+\pagenumbering{gobble}
+
     \input{formatierungen/cover}
     \newpage
     \tableofcontents
-    \thispagestyle{empty}
     \newpage
     \pagenumbering{arabic}
     \section{Einleitung}
@@ -17,8 +18,11 @@
     \section{Software}
     \input{Sections/3_software}
     \pagebreak
+    \section{Alternativen}
+    \input{Sections/4_alternativloesungen}
+    \pagebreak
     \section{Fazit}
-    \input{Sections/5_conclusion}\\
+    \input{Sections/5_conclusion}
     \clearpage
     \pagestyle{plain}
     \section{Quellen- und Literaturverzeichnis}
