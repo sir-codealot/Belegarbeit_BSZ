@@ -1,18 +1,19 @@
 % \usepackage{xcolor}
-% \usepackage{glossaries}
 % \usepackage{lingmacros}
-% \usepackage{tree-dvips}
+\usepackage{tree-dvips}
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-% \usepackage{xr}
+\usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{wrapfig,lipsum}
 \usepackage[tocflat]{tocstyle}
-% \usepackage[bottom]{footmisc}
+\usepackage{tocloft}
+\usepackage[perpage]{footmisc}
 \usepackage[ngerman, num]{isodate}
 % \usepackage{fourier}
-% \usepackage[parfill]{parskip}
-\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 % % * Set page layout
 % % Seitenränder
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
@@ -20,46 +21,75 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{enumerate}
-\usepackage{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{enumitem}
 
 %subsubsubsections
-\usepackage{titlesec}
-
-\setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{4}
-
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-
-\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+%\usepackage{titlesec}
+%\setcounter{secnumdepth}{4}
+%\setcounter{tocdepth}{4}
+%
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%
+%\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
 
 
 
 % Kopfzeile
 \linespread{1.25}
 \usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
 \pagestyle{fancy}
+% ------------------------------
 
+% Seitenzahl in Fusszeile rechts
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+% ------------------------------
 
 \renewcommand{\refname}{}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
+
+% Bilder und Bildunterschriften ---------------------
 % Bilder Referenzen
 \usepackage{graphicx}
-\graphicspath{ {./bilder/} }
+\graphicspath{ {bilder/} }
 
-\renewcommand{\listfigurename}{}
+% Bilduntertitel-Format "blank" fuer leere Captions
+%\DeclareCaptionLabelFormat{blank}{}
+
+% Titel ohne babel ...
+%\renewcommand{\listfigurename}{}
+
+% Titel mit babel und ngerman als Sprache
+\addto\captionsngerman{%
+  \renewcommand{\listfigurename}%
+    {}%
+}
+
 \makeatother
 \renewcommand{\figurename}{Abbildung}
 %\renewcommand{\thefigure}{\thefigure \arabic{figure}}
 \renewcommand{\cftfigfont}{Abb. }
+% -----------------------------------------------------
 
+% Inhaltsverzeichnis ------------------------------------------------
+% Titel ohne babel ...
+%\renewcommand{\contentsname}{Inhalt}
 
+% ... und mit babel und ngerman als Sprache
+\addto\captionsngerman{% Replace "ngerman" with the language you use
+  \renewcommand{\contentsname}%
+    {Inhalt}%
+}
 
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% -------------------------------------------------------------------
 
-\renewcommand{\contentsname}{Inhalt}
+%\renewcommand{\cftsecfont}{\normalfont\slshape\}
 
 
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
@@ -80,3 +110,14 @@
 \renewcommand{\tablename}{Tabelle}
 
 \setlength{\parindent}{0pt}
+
+% Abstand zwischen Text und horizontaler Ebene über Fußnoten
+\setlength{\skip\footins}{1cm}
+
+\newcommand{\headingSpace}{1.5cm}
+
+% Für die Einrückung wird das Paket tocloft benötigt
+%\cftsetindents{chapter}{0.0cm}{\headingSpace}
+\cftsetindents{section}{0.0cm}{\headingSpace}
+\cftsetindents{subsection}{0.0cm}{\headingSpace}
+\cftsetindents{subsubsection}{0.0cm}{\headingSpace}

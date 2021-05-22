@@ -2,25 +2,34 @@
 \input{formatierungen/userpackages}
 
 \begin{document}
+\pagenumbering{gobble}
+
     \input{formatierungen/cover}
-    \pagebreak
+    \newpage
     \tableofcontents
+    \newpage
+    \pagenumbering{arabic}
+    \section{Einleitung}
+    \input{Sections/1_Einleitung}
     \pagebreak
-    \section{Vorbereitung}
-    \input{Sections/1_Vorbereitung}
+    \section{Datenschutz}
+    \input{Sections/2_datenschutz}
     \pagebreak
-    \section{Durchführung}
-    \input{Sections/2_Durchfuehrung}
+    \section{Software}
+    \input{Sections/3_software}
     \pagebreak
-    \section{Abbildungsverzeichnis}
-    \input{Sections/4_Abbildungsverzeichnis}
+    \section{Alternativen}
+    \input{Sections/4_alternativloesungen}
     \pagebreak
-    \section{Tabellenverzeichnis}
-    \listoftables
-    \pagebreak
-    \section{Quellen}
-    \input{Sections/3_Quellen}
+    \section{Fazit}
+    \input{Sections/5_conclusion}
+    \clearpage
+    \pagestyle{plain} % keine Kopfzeile und im Fuss nur noch die Seitenzahl
+    \section{Literatur}
+    \input{Sections/6_sources}
     \pagebreak
     \section{Glossar}
-    \input{Sections/5_Glossar}
+    \input{Sections/7_glossar}
+    \pagebreak
+    \input{Sections/8_selbstsaendigkeitserklaerung}
 \end{document}
