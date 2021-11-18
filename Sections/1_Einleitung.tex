@@ -1,5 +1,25 @@
-Täglich werden von Unternehmen aus allen Branchen Daten unterschiedlichster Art erhoben, von Kundenkorrespondenz über das Verarbeiten personenbezogener Daten im Sinne geltendem europäischen Rechtes bis hin zur Auswertung interner Produktionsabläufe und anderer Schaffensprozesse. Sei es die E-Mail an den Kollegen, die Messenger-Nachricht im Gruppenchat oder das als Videokonferenz abgehaltene Team-Meeting.\\
-Dabei kommen im Büroalltag zumeist Betriebssysteme und Büro-Standardsoftware von Microsoft zum Einsatz, aber auch Software und Apps die jeder aus seinem privaten Umfeld kennt, von führenden Herstellern mit Sitz der Firmenzentrale meist außerhalb des europäischen Wirtschaftsraumes wird verwendet. Namhafte Vertreter sind hier beispielsweise Microsoft, Google, Zoom oder Facebook.\\
-Nun sind die Hersteller zwar verpflichtet, in Europa vertriebene Produkte den hier gesetzlich geregelten Datenschutzbestimmungen anzupassen und müssen diese auch verbindlich umsetzen. Dass dies nicht immer auf Anhieb gelingt, weil die jeweiligen Produkte nur teilweise oder gänzlich nicht den rechtlichen Gegebenheiten angepasst werden oder diese Anpassung seitens der Hersteller sehr viel Zeit in Anspruch nimmt, soll Thema dieser Belegarbeit sein.\\
-Diese Arbeit beleuchtet den europäischen und US-amerikanischen Datenschutz und stellt beide gegenüber, um die bestehende Diskrepanz zwischen den beiden Gesetzgebungen zu\\
-erläutern. Danach wird der Fokus auf Produkte von Microsoft für den Büroalltag gelegt, im speziellen Windows 10 und Microsoft Office und wie und in welchem Umfang durch diese Produkte personenbezogene Daten erhoben werden. In diesem Zusammenhang soll auch geklärt werden, ob die Erhebung immer mit den gesetzlichen Gegebenheiten konform sind.
+Im Folgenden wird das Projekt \glqq Contact Search Tool\grqq{} dokumentiert. Dieses Projekt wurde im Rahmen der Abschlussprüfung zum Fachinformatiker für Anwendungsentwicklung\footnote{äquivalent Übungsprojekt} erstellt. Der Ausbildungsbetrieb ist Unitedprint.com SE in Radebeul. Unitedprint zählt zu den großen E-Commerce-Unternehmen im Bereich Druck. Das Unternehmen besitzt eine eigene IT-Abteilung, welche sich unter anderem mit der Entwicklung neuer Features und der Wartung der eigenen Webportale sowie der Pflege der unternehmenseigenen Administration befasst. Dieses Projekt ist eines der zahlreichen internen Projekte , in denen das Unternehmen gleichzeitig auch der Auftraggeber ist.\\
+
+\subsection{Auftraggeber}
+    Auftraggeber und zugleich Kunde des Projektes ist das Backend Relaunch Team, welches Teil der IT-Development Abteilung des ausbildenden Unternehmens ist. Dieses befasst sich mit dem Neubau des unternehmenseigenen Administrations-Backends, eine Sammlung verschiedener für den internen Betrieb benötigter Tools, welche den jeweiligen Abteilungen für die Bearbeitung der unterschiedllichen Abläufe zur Verfügung stehen.\\
+    Das Team steht während der Entwicklung und Testphase des Projekt-Tools als Ansprechpartner für den Auszubildenden zur Verfügung.
+
+\subsection{Problembeschreibung}
+    Die momentan genutzte Unternehmens-Administration, eine Sammlung für den betrieblichen Ablauf notwendiger Tools, ist technisch überholt und über ihre Nutzungszeit hinweg immer weiter durch neu hinzugekommene Werkzeuge  gewachsen, die zwischenzeitlich teils kaum oder gar keine Verwendung finden, sich aber trotzdem noch im Codebestand befinden und bestenfalls lediglich im Frontend deaktiviert wurden.
+
+\subsection{Projektbeschreibung}
+    Im Zuge des Relaunch der Unternehmens-Administration soll der Bestand bereitgestellter Tools überarbeitet und die Neuimplementierung dieser mit angepassten Anforderungen vorgenommen werden. Eines der benötigten Tools ist das Kontakt-Tool, über welches sich Mitarbeiterdaten abrufen lassen. Dieses bietet, neben den für alle Mitarbeiter einsehbaren Daten, die Abteilung Human Resources hat die Möglichkeit, eine umfangreichere Ansicht der sogenannten Stammdaten aufzurufen.
+
+\vfill
+\pagebreak
+
+\subsection{Projektbegründung}
+    Da es zum einen immer schwieriger wird, Perl-Entwickler zu finden und zum anderen Perl technisch von anderen verfügbaren Sprachen in seiner Leistungsfähigkeit überholt wurde, hat sich der Auftraggeber dazu entschieden, die Admin auf PHP- und Next.JS-Basis von Grund auf neu zu implementieren. Damit geht einher, dass der Bestand an verfügbaren Tools geprüft und überarbeitet wird und bei Tools, die übernommen werden, die jeweiligen Anforderungen neu bewertet werden und Funktionalitäten entfallen oder hinzugefügt werden müssen.\\
+    Das Kontakt-Tool ist eines der Tools, welches neu und ob dessen abteilungsübergreifender Wichtigkeit für den reibungslosen betrieblichen Ablauf auch als eines der Ersten implementiert werden soll.
+
+\subsection{Projektziele}
+    Mit Abschluss des Projektes soll ein funktionierendes Tool zum Suchen von aktiven Mitarbeitern und dem Anzeigen zugehöriger Daten entstehen. Das Tool soll den gleichen Funktionalität bezüglich der Suchfunktion wie das Bestehende aufweisen, jedoch in technisch optimierter Form im Relaunch des Administrations-Backend implementiert werden. Des Weiteren soll der Umfang der angezeigten Daten reduziert werden, da viele bisherig angezeigte Informationen nicht mehr mit aktuellen Datenschutzbestimmungen vereinbar sind.\\
+    Das Tool wird jedoch zum Zeitpunkt der Abgabe noch nicht produktiv genutzt werden, da im Relaunch derzeitig noch keine Rechteverwaltung implementiert ist und es dadurch nichtqualifierten Nutzern einen zu großen Einblick in die Stammdaten Mitarbeiter gewährt.
+
+\vfill
+\pagebreak

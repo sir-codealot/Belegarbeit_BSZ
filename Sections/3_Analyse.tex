@@ -1,0 +1,28 @@
+\subsection{Projektschnittstellen}
+    Die Projektschnittstellen können in Personen- und technische Schnittstellen unterteilt werden. In diesem Rahmen wirkte die Fachbetreuerin, Frau Bitterlich, bei der Projektplanung und Anforderungsausarbeitung sowie in nachträglichen Absprachen zum Projekt mit. Unterstützung während der Entwicklung und zur Code Review wurde durch Herrn Schilde, Herrn Schubert und Herrn Makarov gestellt. Anwendertests wurden durch Mitarbeiter der Abteilung Human Resources durchgeführt.\\
+    Technische Schnittstellen sind die relationalen Datenbanken des Unternehmens sowie der Relaunch der unternehmenseigenene Administration.
+
+\subsection{Ist-Analyse}
+    Das momentan produktiv genutzte Administrations-Backend (\glqq die Admin\grqq{}) basiert backendseitig technisch auf Perl mit dem Framework \glqq Catalyst\grqq{}, welches ergänzt wird durch das hauseigen entwickelte und ebenfalls darauf aufbauende Framework \glqq Mariposa\grqq{}. Dieses stellt die jeweiligen Tools nach dem MVC-Prinip\footnote{Model View Controller} bereit. Das HTML der Anwendung wird weitestgehend serverseitig mit Hilfe des \glqq Template Toolkit\grqq{} Moduls für Perl gerendert. Für clientseitige Veränderungen der angezeigten Web-Anwendung kommt Javascript und jQuery zum Einsatz.\\
+    Eines der bereitgestellten Tools ist das Kontakt-Tool, über welches die Mitarbeiter des Unternehmens gesucht und unter anderem die Kontaktdaten angezeigt werden können. Die Fachabteilung Human Resources kann über dieses Tool auch weiterführende Informationen, wie den Urlaubsansprüch oder Fehlgründe, für einzelne Mitarbeiter abrufen. Diese sogenannten Stammdaten werden momentan doppelt gepflegt - ein Mal in einer MySQL Datenbank und zusätzlich über das im Unternehmen genutzte Zeiterfassungssystem der Tempras AG. Die Pflege soll zukünftig ausschließlich über das Zeiterfassungssystem erfolgen. Anschließend sollen die Datensätze in der Datenbank aus diesem Bestand aktualisert werden.
+
+\subsection{Soll-Analyse}
+    Um die Admin zu modernisieren, wurde sich dazu entschieden, das bestehende System nicht zu überholen, sondern dieses zu relaunchen. Dadurch wird nicht nur die Codebasis entschlackt, auch die insgesamte Performance der Admin steigt durch den damit einhergehenden Sprachwechsel sowohl auf PHP mit dem Framework \glqq Laravel\grqq{} als auch auf Node.js zum Bereitstellen serverseitig vorgerenderter Webseiten. Das Javascript-Framework \glqq React\grqq{} übernimmt das clientseitige Rendern der Web-App. Die Anwendung folgt somit weiterhin dem MVC-Prinzip.\pagebreak
+    Das neue Kontakt-Tool soll, im Gegensatz zum alten, auch keine Spreadpartner, sondern nur noch Angestellte anzeigen und zum Zeitpunkt der Abgabe technisch soweit vorbereitet sein, dass ein späteres Hinzufügen eines Rollen- und Rechtesystems möglichst einfach umzusetzen ist. Die sonstige Usability soll im Vergleich zur alten Kontaktsuche weitesgehend erhalten bleiben.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\textwidth]{suche_use-case.jpg}
+        \caption{Anwendungsfalldiagramm \glqq Kontaktsuche\grqq{}}
+    \end{figure}
+
+\subsection{Make-Or-Buy}
+    Die Option, eine externe Software für diesen Anwendungsfall einzukaufen, wurde schnell verworfen, da die Vorteile einer Eigenentwicklung überwiegen. Ein fremdentwickeltes Produkt bringt beispielsweise mit, dass zusätzliche Schnittstellen zum restlichen System geschaffen werden müssten und die Software entweder in einer gesonderten Form in den Admin Relaunch eingebettet werden müsste, was zusätzliche Kosten verursachen würde, oder als Standalone Anwendung betrieben wird, wodurch der Gedanke einer zentralen Tool-Sammlung nicht konsequent umgesetzt wird.\\
+    Eine interne Entwicklung des Kontakt-Tools hat mehrere hervorzuhebende Vorteile. Zum einen ist das zugrundeliegende System mit seinen Schnittstellen bekannt. Zum anderen kann die Software von Anfang an in die Codebasis des Admin Relaunch integriert und punktgenau auf die Anforderungen der Fachabteilung zugeschnitten werden. Auch die spätere Wartung ist einfacher zu realisieren, da dies durch die IT-Entwicklungsabteilung erfolgen kann und kein Bedarf an Wartungsverträgen vorliegt, der ebenfalls wieder Kosten verursacht. Insofern sind die Kosten einer Eigenentwicklung tendenziell geringer als der Kauf eines externen Produktes.
+
+\vfill
+\pagebreak
+
+\subsection{Kostenanalyse}
+    Für die Kostenanalyse werden Personal- und Betriebskosten zur Software-Entwicklung im Rahmen des Projektes in Betracht gezogen. Zur Berechnung der Personalkosten wurden Bruttogehälter in Höhe von monatlich 1.350 € für Auszubildende, 1.900 € für Mitarbeiter der Fachabteilung Human Resources und 2.500 € für Entwickler veranschlagt. Um ein realitätsnahes Ergebnis zu erzielen, wurden auch Faktoren wie 25 Tage Urlaub pro Jahr, durchschnittlich 10 Krank- oder Fehltage sowie eine Wochenarbeitszeit von 40 Stunden je Mitarbeiter einkalkuliert. Des Weiteren werden Zusatzkosten von 7,5 \% und Verwaltungskosten in Höhe von 2,5 \% berechnet. Die Betriebskosten wurden pauschal mit 15 € pro Tag veranschlagt. Darin beinhaltet Kosten für Soft- und Hardware sowie Strom- und Heizkosten.\\
+    Unter Betrachtung der aufgeführten Posten belaufen sich die angefallen Kosten auf
